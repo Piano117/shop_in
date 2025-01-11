@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:shop_in/keyboardVisibility.dart';
 import 'package:shop_in/login/registerUser.dart';
 
+import '../admin/admin.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -92,6 +94,10 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(context, CupertinoPageRoute(
+                        builder: (context) => Admin()));
+                  }, child: Text('FlyBTN')),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
